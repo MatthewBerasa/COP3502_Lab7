@@ -14,7 +14,7 @@ int main() {
 
 	int* swapArr = bubbleSort(arr, arrSize);
 	puts("\n\nNumber of Swap Per Index: ");
-	for(int z = 0; z < arrSize; z++)
+	for (int z = 0; z < arrSize; z++)
 		printf("Arr[%d]: %d\n", z, swapArr[z]);
 
 	puts("\n\nArray After Swap: ");
@@ -35,7 +35,7 @@ int* bubbleSort(int arr[], int arrSize) {
 	for (int i = 0; i < arrSize - 1; i++) {
 		for (int j = 0; j < arrSize - i - 1; j++) {
 			if (arr[j] > arr[j + 1]) {
-				swap(arr + j, arr + j + 1, swapArr, j);
+				swap(arr + j, arr + j + 1, swapArr, i);
 			}
 		}
 	}
